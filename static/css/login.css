@@ -55,6 +55,7 @@
     color: blue;
     top: 30px;
     left: 39px;
+    transition: all 500ms;
 }
 
 .input-fields input {

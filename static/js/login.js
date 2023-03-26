@@ -2,49 +2,25 @@ let emailInput = document.getElementById('email');
 let passwordInput = document.getElementById('password');
 emailInput.addEventListener('focus', () => {
     if (emailInput.value == "") {
-        let x = 30;
-        let si = setInterval(() => {
-            // console.log(emailInput.parentNode.children[0].style.top);
-            emailInput.parentNode.children[0].style.top = `${x}px`;
-            x--;
-            if (x == 0) clearInterval(si);
-        }, 10);
+        emailInput.parentNode.children[0].style.top = 0;
     }
 })
 
 emailInput.addEventListener('blur', () => {
     if (emailInput.value == "") {
-        let x = 0;
-        let si = setInterval(() => {
-            console.log(emailInput.parentNode.children[0].style.top);
-            emailInput.parentNode.children[0].style.top = `${x}px`;
-            x++;
-            if (x == 30) clearInterval(si);
-        }, 10);
+        emailInput.parentNode.children[0].style.top = `30px`;
     }
 })
 
 passwordInput.onfocus = () => {
     if (passwordInput.value == "") {
-        let x = 30;
-        let si = setInterval(() => {
-            // console.log(emailInput.parentNode.children[0].style.top);`
-            passwordInput.parentNode.children[0].style.top = `${x}px`;
-            x--;
-            if (x == 0) clearInterval(si);
-        }, 10);
+        passwordInput.parentNode.children[0].style.top = 0;
     }
 }
 
 passwordInput.onblur = () => {
     if (passwordInput.value == "") {
-        let x = 0;
-        let si = setInterval(() => {
-            // console.log(emailInput.parentNode.children[0].style.top);
-            passwordInput.parentNode.children[0].style.top = `${x}px`;
-            x++;
-            if (x == 30) clearInterval(si);
-        }, 10);
+        passwordInput.parentNode.children[0].style.top = `30px`;
     }
 }
 
