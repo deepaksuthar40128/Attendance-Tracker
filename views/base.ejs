@@ -7,26 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attandance</title>
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 </head>
 
 <body>
-    <header class="myheader">
-        <p>Track Attandance</p>
-    </header>
-    <div class="mainContainer">
+    <div class="main-box">
 
 
-        <% if(!logged){ %>
-            
-            <!-- Design is user is not logged in  -->
-            
-            <% }else{ %>
-                
-                <!-- Design is user is logged in  -->
-        <% } %>
+        <nav class="nav">
+            <div class="logo">
+                <a href="#"><img src="img/img.png" alt="logo"></a>
+            </div>
+            <div class="login">
+                Login
+                <div class="icon"><i class="bi bi-box-arrow-in-right"></i></div>
+            </div>
+        </nav>
 
+        <div class="sec1">
+            <img src="img/img2.avif" alt="">
+            <div class="bigt">Attendence Tracker</div>
+            <button class="btn">Learn More</button>
+        </div>
 
+        <div class="sec2">
+            <img src="img/img3.avif" alt="">
+            <div class="bigt">What we Do</div>
+            <ul class="list">
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+            </ul>
+        </div>
+        <!-- <div class="mainContainer"> -->
     </div>
+
+
+
+
+
     <script src="js/base.js"></script>
 </body>
 

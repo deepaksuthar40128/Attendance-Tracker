@@ -6,24 +6,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 
 <body>
 
-                <% if( error !="" ){ %>
+    <div class="main-box">
+        <div class="top-box">
+            <h1 class="heading">
+                ATTENDENCE </br> TRACKER
+            </h1>
+        </div>
+        <div class="mid-box">
+            <div class="fancy-text">LOGIN</div>
+            <form action="/login" id="myform">
+                <div class="input-fields">
+                    <label class="labels" for="email">Email</label>;
+                    <input class="try1" type="email" name="email" id="email" autocomplete="off">
+                </div>
+                <div class="input-fields">
+                    <label class="labels" for="Password">Password</label>
+                    <input type="password" name="password" id="password">
+                    <i class="fa-solid fa-eye" id="eye"></i>
+                    <div class="link">
+                        <a href="#">Forgot your password</a>
+                    </div>
+                </div>
+            </form>
+            <button class="btn">LOGIN</button>
+            <p>or</p>
+            <button class="btn1">
+                <img src="img/img.png" alt="Google"> Sign in to Google
+            </button>
+        </div>
+    </div>
+    <!-- <% if( error !="" ){ %>
                      
                         <%= error %>
-                         <!-- System Error msz -->
+                         
                          
                 <% } %>
                 <% if( error_messages !="" ){ %>
                             
                             <%= error_messages %>
-                            <!-- User Error msz -->
-
-                <% } %>
                             
- <script src="js/login.js"></script>
+
+                <% } %> -->
+
+
+    <script src="js/login.js"></script>
 </body>
 
 </html>
