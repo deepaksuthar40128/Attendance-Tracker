@@ -19,6 +19,7 @@ function checkAuth(req, res, next) {
 }
 
 app.get('/', (req, res) => {
+<<<<<<< HEAD
     if (req.isAuthenticated()) {
         res.render("base", { logged: true });
     } else {
@@ -28,6 +29,14 @@ app.get('/', (req, res) => {
 })
 app.get('/login', (req, res) => {
     res.render("login", { csrfToken: req.csrfToken() });
+=======
+    // if (req.isAuthenticated()) {
+    //     res.render("base", { logged: true });
+    // } else {
+    //     res.render("base", { logged: false });
+    // }
+    res.render('home')
+>>>>>>> bb4df415d54a9b0ae9a4dee4af3d6e0307f566ea
 })
 
 app.post('/login', (req, res, next) => {
