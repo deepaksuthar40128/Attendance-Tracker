@@ -6,7 +6,7 @@ const ctx5 = document.getElementById('myChart5');
 
 
   new Chart(ctx1, {
-    type: 'doughnut',
+    type: 'doughnut',  
     data: {
       labels: [
        
