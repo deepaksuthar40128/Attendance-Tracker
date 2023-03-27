@@ -5,8 +5,7 @@ const user = require('../model/user');
 const bcryptjs = require('bcryptjs');
 const crypto = require('crypto');
 const mailer = require('./sendMail');
-const { router } = require('./routes');
-const notesRoutes = require('./notesRoutes');
+const mainRoutes = require('./mainRoutes');
 
 function checkAuth(req, res, next) {
     if (req.isAuthenticated()) {
@@ -17,38 +16,6 @@ function checkAuth(req, res, next) {
         res.redirect('/login');
     }
 }
-
-app.get('/send-verification-email', checkAuth, async (req, res) => {
-    if (req.user.isVerified || req.user.provider == 'google') {
-        res.redirect('/profile?mode=day');
-    }
-    else {
-        var token = crypto.randomBytes(32).toString('hex');
-        await resetTokens({ token: token, email: req.user.email }).save();
-        mailer.sendVerifyEmail(req.user.email, token);
-        res.render('profile2', { userprofile: req.user.profile, username: req.user.username, verified: req.user.isVerified, csrfToken: req.csrfToken(), emailsent: true });
-    }
-})
-
-app.get('/verifyemail', async (req, res) => {
-    const token = req.query.token;
-    if (token) {
-        var check = await resetTokens.findOne({ token: token });
-        if (check) {
-            var userData = await user.findOne({ email: check.email });
-            userData.isVerified = true;
-            await userData.save();
-            await resetTokens.findOneAndDelete({ token: token });
-            res.redirect('/profile');
-        }
-        else {
-            res.render('profile2', { userprofile: req.user.profile, username: req.user.username, verified: req.user.isVerified, csrfToken: req.csrfToken(), err: "Invalid token or Token has expired, Try again." });
-        }
-    }
-    else {
-        res.redirect('/profile?mode=day');
-    }
-})
 
 app.get('/user/forgot-password', async (req, res) => {
     res.render('forgot-password.ejs', { csrfToken: req.csrfToken() });
@@ -111,6 +78,6 @@ app.post('/user/reset-password', async (req, res) => {
     }
 });
 
-app.use(notesRoutes);
+app.use(mainRoutes);
 
 module.exports = app;
