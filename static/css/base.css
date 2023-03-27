@@ -6,10 +6,14 @@
 
 body {
     max-height: 100px;
-
+    background-image: url('../img/img6.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
-.main-box{
+.main-box {
     max-width: 30rem;
     width: 100%;
     margin: auto;
@@ -18,7 +22,11 @@ body {
 .nav {
     display: flex;
     height: 50px;
+    position: sticky;
+    top: 0;
     align-items: center;
+    z-index: 1;
+    background: white;
     justify-content: space-between;
 }
 
@@ -33,11 +41,14 @@ body {
 }
 
 .login {
-    /* position: absolute; */
     display: flex;
-    /* top: 1.9%;
-    right: 3%; */
     font-size: 1.3rem;
+    color: blue;
+    cursor: pointer;
+}
+
+.login a{
+    text-decoration: none;
     color: blue;
 }
 
@@ -116,14 +127,170 @@ body {
     font-weight: bolder;
 }
 
-.list{
+.list {
     position: absolute;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-.list li{
+.list li {
     margin-top: 12px;
 }
 
+.sec3 {
+    height: 300px;
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+}
+
+.sec3 img {
+    width: 100%;
+    height: 300px;
+}
+
+.sec3 .bigt {
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.sec3 .img1 {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: white;
+    top: 43%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    font-weight: bolder;
+}
+
+.sec3 .img2 {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: white;
+    top: 43%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    font-weight: bolder;
+}
+
+.sec3 .img3 {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: white;
+    top: 80%;
+    left: 32%;
+    transform: translate(-50%, -50%);
+    font-weight: bolder;
+}
+
+.sec3 .img4 {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: white;
+    top: 80%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    font-weight: bolder;
+}
+
+.sec4 {
+    height: 300px;
+    position: relative;
+    text-align: left;
+    color: white;
+    margin-top: 30px;
+}
+
+.sec4 img {
+    width: 100%;
+    height: 325px;
+}
+
+.sec4 #myform {
+    position: absolute;
+    color: white;
+    text-align: left;
+    top: 50%;
+    width: 100%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+}
+
+.fancy-text {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 21px;
+    color: #0066ff;
+    padding-top: 1rem;
+}
+
+.input-fields {
+    height: 6rem;
+    top: 1;
+    position: relative;
+    top: 38px;
+}
+
+.input-fields1 {
+    height: 1rem;
+}
+.labels {
+    position: relative;
+    font-size: 20px;
+    color: blue;
+    top: 30px;
+    left: 75px;
+}
+
+.labels1 {
+    position: relative;
+    font-size: 14px;
+    color: blue;
+    top: 10px;
+    left: 95px;
+}
+
+.input-fields input {
+    background: transparent;
+    display: block;
+    margin: auto;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid blue;
+    outline: none;
+    font-size: 20px;
+    color: #f7be15;
+}
+
+.check{
+    position: relative;
+    left: -92px;
+    top: 11px;
+}
+
+.foot{
+    background-color: #323232;
+    width: 100%;
+    height: 35px;
+    margin: 30px 0;
+    text-align: center;
+    padding: 8px 0;
+}

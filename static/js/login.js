@@ -32,6 +32,3 @@ eye.addEventListener("click", function () {
     const type = passwordInput1.getAttribute("type") === "password" ? "text" : "password"
     passwordInput.setAttribute("type", type)
 })
-
-
-
