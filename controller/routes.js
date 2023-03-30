@@ -52,11 +52,10 @@ app.get('/logout', (req, res) => {
 
 
 app.get('/home', checkAuth, (req, res) => {
-    if (req.user.role == "teacher") {
-        res.render('home', { username: req.user.username, csrfToken: req.csrfToken() });
-    }
+    if (req.user.role == "teacher")
+        res.render('profHome', { username: req.user.username, csrfToken: req.csrfToken() });
     else
-    res.render('profHome', { username: req.user.username, csrfToken: req.csrfToken() })
+        res.render('home', { username: req.user.username, csrfToken: req.csrfToken() });
 })
 
 app.get('/google', passport.authenticate('google', { scope: ['profile', 'email',] }));

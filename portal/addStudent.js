@@ -37,10 +37,6 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-app.get('/uploadfile', (req, res) => {
-    res.render('profHome', { csrfToken: req.csrfToken() });
-})
-
 app.get('/addCourse', checkAuth,  async(req, res) => {
     if (req.user.role == "teacher") {
         let oldteacher = await Teacher.findOne({ email: req.user.email });
@@ -80,7 +76,7 @@ app.post('/uploadStudentsheet', upload.single('file'), async (req, res) => {
     });
 
     const teacher = await Teacher.findOneAndUpdate(
-        { _id: req.user._id },
+        { _id: profData._id },
         { $push: { courses: newCourse._id } },
         { new: true }
     );
