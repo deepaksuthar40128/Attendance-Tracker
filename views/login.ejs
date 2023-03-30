@@ -18,8 +18,25 @@
             </h1>
         </div>
         <div class="mid-box">
+            <% if( error !="" ){ %>
+                <div class="error" role="alert">
+                    <strong> Error </strong>
+                    <%= error %>
+                        <button type="button" onclick="document.getElementsByClassName('error')[0].remove()"
+                            class="btn-close">x</button>
+                </div>
+                <% } %>
+                    <% if( error_messages !="" ){ %>
+                        <div class="error" role="alert">
+                            <strong> Error </strong>
+                            <%= error_messages %>
+                                <button type="button" onclick="document.getElementsByClassName('error')[0].remove()"
+                                    class="btn-close">x</button>
+                        </div>
+                        <% } %>
             <div class="fancy-text">LOGIN</div>
-            <form action="/login" id="myform">
+            <form action="/login" method="post" id="myform">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
                 <div class="input-fields">
                     <label class="labels" for="email">Email</label>;
                     <input class="try1" type="email" name="email" id="email" autocomplete="off">
@@ -32,26 +49,14 @@
                         <a href="#">Forgot your password</a>
                     </div>
                 </div>
+                <button type="submit" class="btn">LOGIN</button>
             </form>
-            <button class="btn">LOGIN</button>
             <p>or</p>
             <button class="btn1">
-                <img src="img/img.png" alt="Google"> Sign in to Google
+                <img src="img/img.png" alt="Google"> <a href="/google" >Sign in to Google</a>
             </button>
         </div>
     </div>
-    <!-- <% if( error !="" ){ %>
-                     
-                        <%= error %>
-                         
-                         
-                <% } %>
-                <% if( error_messages !="" ){ %>
-                            
-                            <%= error_messages %>
-                            
-
-                <% } %> -->
 
 
     <script src="js/login.js"></script>

@@ -91,4 +91,10 @@ const ctx5 = document.getElementById('myChart5');
     },
   });
 
-  
+const lineContainer = document.querySelector(".line-container");
+const menu = document.querySelector(".menu");
+
+lineContainer.addEventListener("click", () => {
+  lineContainer.classList.toggle("active");
+  menu.classList.toggle("active");
+});

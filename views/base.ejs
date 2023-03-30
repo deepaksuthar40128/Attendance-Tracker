@@ -18,10 +18,17 @@
             <div class="logo">
                 <a href="#"><img src="img/img.png" alt="logo"></a>
             </div>
-            <div class="login">
-                <a href="login.ejs">Login</a>
-                <div class="icon"><a href="login.ejs"><i class="bi bi-box-arrow-in-right"></i></a></div>
-            </div>
+            <%if(logged){%>
+                <div class="login">
+                    <a href="/home">Home</a>
+                    <div class="icon"><a href="/home"><i class="bi bi-box-arrow-in-right"></i></a></div>
+                </div>
+            <%}else{%>
+                    <div class="login">
+                        <a href="/login">Login</a>
+                        <div class="icon"><a href="/login"><i class="bi bi-box-arrow-in-right"></i></a></div>
+                    </div>
+            <%}%>
         </nav>
 
         <div class="sec1">

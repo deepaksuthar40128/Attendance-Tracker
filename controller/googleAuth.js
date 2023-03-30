@@ -1,7 +1,7 @@
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
-const user = require('../model/user');
+const user = require('../model/users');
 
-module.exports = function (passport) { 
+module.exports = function (passport) {
     passport.use(new GoogleStrategy({
         clientID: process.env.GoogleclientId,
         clientSecret: process.env.GoogleclientSecret,
@@ -12,22 +12,12 @@ module.exports = function (passport) {
                 return done(null, data);
             }
             else {
-                user({
-                    username: profile.displayName,
-                    email: profile.emails[0].value,
-                    facebookId: null,
-                    googleId: profile.id,
-                    profile: profile.photos[0].value,
-                    password: null,
-                    provider: 'google',
-                    isVerified: true,
-                }).save(function (err, data) {
-                    return done(null, data);
-                });
+                console.log("User not exits with this email");
+                return done(null, false, { message: "User not exits with this email" });
             }
         })
     }
-));
+    ));
 
 
     passport.serializeUser(function (user, done) {

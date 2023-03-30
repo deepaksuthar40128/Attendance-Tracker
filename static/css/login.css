@@ -21,14 +21,14 @@
 }
 
 .mid-box {
-    width: 90%;
+width: 90%;
     position: relative;
     background: white;
     margin: auto;
     top: -20px;
     box-shadow: 0px 0px 5px 2px #b7b7b7;
     border-radius: 10px;
-    height: 550px;
+    padding: 10px 0;
 }
 
 .heading {
@@ -70,7 +70,7 @@
     color: #f7be15;
 }
 
-.btn{
+.btn {
     color: white;
     padding: 10px 50px;
     border-radius: 20px;
@@ -93,34 +93,54 @@
     display: flex;
     align-items: center;
 }
-.btn:active{
+
+.btn:active {
     background-color: #1b51a3;
 }
 
-.btn1 img{
+.btn1 img {
     height: 20px;
     width: 20px;
 }
 
-.input-fields a{
+.input-fields a {
     text-decoration: none;
     color: blue;
-    margin: 0% 0% 0% 50%  ;
+    margin: 0% 0% 0% 50%;
     cursor: pointer;
 }
 
-.fa-eye{
-    position: absolute;
-    top: 49%;
-    right: 11%;
-    cursor: pointer;
-    color: lightgray;
-  }
+.fa-eye {
+    top: -21%;
+        position: relative;
+        float: right;
+        right: 11%;
+        cursor: pointer;
+        color: lightgray;
+}
 
-  .link{
+.link {
     margin: 5px 0;
-  }
+}
 
-  .mid-box p{
+.mid-box p {
     margin: 0 47%;
-  }
+}
+
+.error {
+    width: 90%;
+    padding: 10px;
+    margin:  auto;
+    background-color: rgb(222, 101, 77);
+    border-radius: 5px;
+    color: white;
+}
+
+.error button {
+    float: right;
+    width: 19px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+}

@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const studentSchema = new Schema({
+const teacherSchema = new Schema({
     name: String,
+    profile: String,
     courses: [{
         type: Schema.Types.ObjectId,
         ref: 'Course'
@@ -10,4 +11,4 @@ const studentSchema = new Schema({
     email: String
 });
 
-module.exports = mongoose.model('Student', studentSchema);
+module.exports = mongoose.model('Teacher', teacherSchema);
