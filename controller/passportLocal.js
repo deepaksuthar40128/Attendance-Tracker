@@ -1,4 +1,4 @@
-const user = require('../model/user');
+const user = require('../model/users');
 const bcryptjs = require('bcryptjs');
 var localStrategy = require('passport-local').Strategy;
 
@@ -10,20 +10,23 @@ module.exports = function (passport) {
             if (!data) {
                 return done(null, false, { message: "user not exits" });
             }
-            if (data.provider=='google') {
-                return done(null, false, { message: "Please login using Google" });
+            // bcryptjs.compare(password, data.password, (err, match) => {
+            //     if (err) {
+            //         return done(null, false);
+            //     }
+            //     if (!match) {
+            //         return done(null, false, { message: "password not match" });
+            //     }
+            //     if (match) {
+            //         return done(null, data);
+            //     }
+            // })
+            if (password == data.password) {
+                return done(null, data);
             }
-            bcryptjs.compare(password, data.password, (err, match) => {
-                if (err) {
-                    return done(null, false);
-                }
-                if (!match) {
-                    return done(null, false, { message: "password not match" });
-                }
-                if (match) {
-                    return done(null, data);
-                }
-            })
+            else {
+                return done(null, false, { message: "password not match" });
+            }
 
         })
     }));

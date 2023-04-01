@@ -2,12 +2,10 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const multer = require('multer');
-const Notes = require('../model/notes');
-const Users = require('../model/user');
-const Remainder = require('../model/remainder');
-const timeago = require('timeago.js');
+const Prof = require('../model/prof');
+const Students = require('../model/student');
+const Users = require('../model/users');
 const mailer = require('./sendMail');
-const schedule = require('node-schedule');
 
 function checkAuth(req, res, next) {
     if (req.isAuthenticated()) {
@@ -18,38 +16,6 @@ function checkAuth(req, res, next) {
         res.redirect('/login');
     }
 }
-
-const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, 'static/uploads/');
-    },
-    filename: function (req, file, cb) {
-        cb(null, Date.now() + file.originalname);
-    },
-});
-
-const fileFilter = (req, file, cb) => {
-    if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
-        cb(null, true);
-    } else {
-        cb(null, false);
-    }
-};
-
-const upload = multer({
-    storage: storage,
-    limits: {
-        fileSize: 1024 * 1024 * 5,
-    },
-    fileFilter: fileFilter,
-});
-
-app.post('/save-img', upload.single('image'), (req, res) => {
-    res.status(200).send({ link: `uploads/${req.file.filename}` });
-});
-
-var Sentiment = require('sentiment');
-var sentiment = new Sentiment();
 
 
 app.post('/saveNote', async (req, res) => {

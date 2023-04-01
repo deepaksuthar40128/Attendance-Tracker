@@ -1,0 +1,177 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+
+body {
+    max-height: 100px;
+}
+
+.phone {
+    /* margin-top: 10px; */
+    /* height: 500px; */
+    /* margin: 20px 150px; */
+    /* border-top: 2px solid black; */
+    border-radius: 5px;
+
+}
+
+.topnav {
+    /* height: 100px; */
+    overflow: hidden;
+    background-color: #f7be15;
+    position: sticky;
+    top: 0;
+    padding-bottom: 10px;
+}
+
+/* Style the hamburger menu */
+.licon {
+    font-size: 30px;
+    position: absolute;
+    right: 13px;
+    top: 40px;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.licon i {
+    background-color: #de9e00;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.ricon {
+    font-size: 30px;
+    position: absolute;
+    left: 30px;
+    top: 45px;
+}
+
+.topnav .text {
+    text-align: center;
+    margin-top: 45px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content .text {
+    margin: 20px 0 0 30px;
+}
+
+.actions {
+    display: flex;
+}
+
+.actions h2 {
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 20px;
+}
+
+
+.percent {
+    font-size: larger;
+    font-weight: bolder;
+    margin-left: 34px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sub {
+    font-size: medium;
+    font-weight: lighter;
+    margin-left: 29px;
+    font-family: 'Poppins', sans-serif;
+}
+
+hr {
+    margin: 20px;
+}
+
+.review h2 {
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 20px;
+}
+
+.subjects {
+    margin: 20px 0;
+    max-height: 21rem;
+    overflow: auto;
+}
+
+.subs {
+    margin: 30px 20px;
+    border: 2px solid blue;
+    border-radius: 15px;
+    color: white;
+    background-color: #72b5de;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+    height: 2rem;
+    text-align: center;
+
+}
+
+
+.foot {
+    /* border: 2px solid black; */
+    padding: 13px 0;
+    height: 2.6rem;
+    background-color: #abb8c0;
+    position: sticky;
+    bottom: 0;
+}
+
+.foot i {
+    font-size: 32px;
+    margin: 30px;
+}
+
+.btns {
+    margin: 20px 0;
+    max-height: 21rem;
+    overflow: auto;
+}
+
+.prof {
+    margin: 30px 20px;
+    border: 2px solid blue;
+    border-radius: 15px;
+    color: white;
+    background-color: #72b5de;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+    height: 2rem;
+    text-align: center;
+}
+
+.t a {
+    font-size: medium;
+    font-weight: lighter;
+    margin-left: 29px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+
+}
+
+.error {
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+    background-color: rgb(222, 101, 77);
+    border-radius: 5px;
+    color: white;
+}
+
+.error button {
+    float: right;
+    width: 19px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+}

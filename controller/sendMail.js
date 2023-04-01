@@ -34,12 +34,15 @@ module.exports.sendVerifyEmail = async (email, token) => {
     });
 };
 
-module.exports.sendReminderEmail = async (email, text) => {
-    await smtpTransport.sendMail({
-        from: "Take Notes",
-        to: email,
-        subject: "Remainder For Note",
-        text: `Check Your Note`,
-        html: text,
-    });
+module.exports.sendNewStudentEnrollmentMsz = (email, text) => {
+    return new Promise(async (Resolve, Reject) => {
+        await smtpTransport.sendMail({
+            from: "Attandance Tracker",
+            to: email,
+            subject: "Hey You Are Now a Member of Attandance Tracker",
+            text: `Hii, There...`,
+            html: text,
+        });
+        Resolve();
+    })
 }
