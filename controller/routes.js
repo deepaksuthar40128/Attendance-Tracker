@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
     // } else {
     //     res.render("base", { logged: false });
     // }
-    res.render('login')
+    res.render('graph&calender')
 })
 // app.get('/login', (req, res) => {
 //     res.render("login", { csrfToken: req.csrfToken() });
