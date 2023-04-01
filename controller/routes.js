@@ -19,6 +19,7 @@ function checkAuth(req, res, next) {
 }
 
 app.get('/', (req, res) => {
+
     if (req.isAuthenticated()) {
         res.render("base", { logged: true });
     } else {
