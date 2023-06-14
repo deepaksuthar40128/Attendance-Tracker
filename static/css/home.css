@@ -1,0 +1,278 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap');
+
+body {
+  max-height: 100px;
+}
+
+.phone {
+  /* margin-top: 10px; */
+  /* height: 840px; */
+  /* margin: 20px 150px; */
+  /* border: 2px solid black; */
+  border-radius: 8px;
+
+}
+
+.topnav {
+  height: 100px;
+  overflow: hidden;
+  background-color: #f7be15;
+  position: sticky;
+  top: 0;
+  z-index: 11;
+}
+
+/* Style the hamburger menu */
+.licon {
+  font-size: 30px;
+  position: absolute;
+  right: 13px;
+  top: 40px;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.licon i {
+  background-color: #de9e00;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.ricon {
+  font-size: 30px;
+  position: absolute;
+  left: 30px;
+  top: 45px;
+}
+
+.topnav .text {
+  text-align: center;
+  margin-top: 45px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.content .text {
+  margin: 20px 0 0 30px;
+}
+
+.charts {
+  width: max-content;
+}
+
+.chart {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+}
+
+.main-chart {
+  /* width: 100%; */
+  overflow: auto;
+  padding: 20px;
+}
+
+.percent {
+  font-size: larger;
+  font-weight: bolder;
+  margin-left: 34px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sub {
+  font-size: medium;
+  font-weight: lighter;
+  margin-left: 29px;
+  font-family: 'Poppins', sans-serif;
+}
+
+hr {
+  margin: 20px;
+}
+
+.review h2 {
+  font-weight: bolder;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 20px;
+}
+
+.subjects {
+  margin: 20px 0;
+  height: 21rem;
+  overflow: auto;
+}
+
+.subs {
+  margin: 30px 20px;
+  border: 2px solid blue;
+  border-radius: 15px;
+  color: white;
+  background-color: #72b5de;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: larger;
+  height: 2rem;
+  text-align: center;
+}
+
+.foot {
+  padding: 13px 0;
+  position: fixed;
+  height: 2.6rem;
+  bottom: 0;
+  width: 100%;
+  background-color: #abb8c0;
+}
+
+.foot i {
+  font-size: 32px;
+  margin: 30px;
+}
+
+.error {
+  width: 90%;
+  padding: 10px;
+  margin: auto;
+  background-color: rgb(222, 101, 77);
+  border-radius: 5px;
+  color: white;
+}
+
+.error button {
+  float: right;
+  width: 19px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+}
+
+.line-container {
+  margin-right: 20px;
+  width: 24px;
+  height: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  /* position: fixed; */
+  /* top: 24px; */
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 20px;
+  transition: transform 1s ease, opacity 0.5s ease;
+  transform-origin: left;
+}
+
+.menu {
+  width: 200px;
+  height: calc(100vh - 93px);
+  background-color: white;
+  position: fixed;
+  top: 96px;
+  /* right: 0px; */
+  left: -250px;
+  padding: 0 20px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  transition: all 1s ease;
+}
+
+.menu-top {
+  flex: 0.1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-search {
+  width: 100%;
+  height: 30px;
+  background-color: lightgray;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.search-icon {
+  color: gray;
+}
+
+.menu-search input {
+  width: 75%;
+  border: none;
+  background-color: lightgray;
+  color: black;
+}
+
+.menu-search input:focus {
+  outline: none;
+}
+
+.menu-center {
+  flex: 0.8;
+}
+
+.menu-item {
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.menu-item span {
+  margin-left: 10px;
+
+}
+
+.menu-bottom {
+  flex: 0.1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-bottom-user {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.menu-bottom-user span {
+  font-size: 14px;
+}
+
+.menu img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.menu.active {
+  transform: translateX(-250px);
+  box-shadow: 0px 0px 0px 10000px #1c1c1c61;
+  left: 250px;
+}
+
+.line-container.active .line-1 {
+  transform: rotate(45deg);
+}
+
+.line-container.active .line-2 {
+  opacity: 0;
+}
+
+.line-container.active .line-3 {
+  transform: rotate(-45deg);
+}

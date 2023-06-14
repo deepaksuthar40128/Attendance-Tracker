@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Course</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input[type="file"],
+        .form-group input[type="number"],
+        .form-group input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input[type="file"]:focus,
+        .form-group input[type="number"]:focus,
+        .form-group input[type="text"]:focus {
+            outline: none;
+            border-color: #666;
+        }
+
+        .submit-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Add Course</h1>
+    <div class="container">
+        <form id="myform"> 
+            <div class="form-group">
+                <label for="file">File:</label>
+                <input type="file" name="file" id="file">
+            </div>
+
+            <div class="form-group">
+                <label for="credit">Credit:</label>
+                <input type="number" name="credit" id="credit">
+            </div>
+
+            <div class="form-group">
+                <label for="courseName">Course Name:</label>
+                <input type="text" name="courseName" id="courseName">
+            </div>
+
+            <div class="form-group">
+                <label for="attendance_criteria">Attendance Criteria:</label>
+                <input type="number" name="attendance_criteria" id="attendance_criteria">
+            </div>
+
+            <button type="submit" id="mypbtn" class="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <script src="js/addCourse.js"></script>
+</body>
+
+</html>

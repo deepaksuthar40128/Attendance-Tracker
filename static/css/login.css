@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-box {
+    width: 100%;
+    max-width: 30rem;
+    margin: auto;
+    height: 10rem;
+}
+
+.top-box {
+    height: 12rem;
+    border-radius: 0 0 30px 30px;
+    background-color: #f7be15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mid-box {
+width: 90%;
+    position: relative;
+    background: white;
+    margin: auto;
+    top: -20px;
+    box-shadow: 0px 0px 5px 2px #b7b7b7;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.heading {
+    color: black;
+    text-align: center;
+}
+
+.fancy-text {
+    height: 8rem;
+    text-align: center;
+    font-size: 21px;
+    color: #0066ff;
+    padding-top: 3.5rem;
+}
+
+
+.input-fields {
+    height: 7rem;
+}
+
+.labels {
+    position: relative;
+    font-size: 20px;
+    color: blue;
+    top: 30px;
+    left: 39px;
+    transition: all 500ms;
+}
+
+.input-fields input {
+    width: 82%;
+    display: block;
+    margin: auto;
+    height: 35px;
+    border: none;
+    border-bottom: 1px solid blue;
+    outline: none;
+    font-size: 20px;
+    color: #f7be15;
+}
+
+.btn {
+    color: white;
+    padding: 10px 50px;
+    border-radius: 20px;
+    margin: 5% 30%;
+    font-weight: bolder;
+    background-color: #0066ff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn1 {
+    color: #181616;
+    padding: 10px 50px 20px 40px;
+    border-radius: 20px;
+    margin: 5% 5% 21% 19%;
+    font-weight: bolder;
+    background-color: rgb(255 185 185 / 15%);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.btn:active {
+    background-color: #1b51a3;
+}
+
+.btn1 img {
+    height: 20px;
+    width: 20px;
+}
+
+.input-fields a {
+    text-decoration: none;
+    color: blue;
+    margin: 0% 0% 0% 50%;
+    cursor: pointer;
+}
+
+.fa-eye {
+    top: -21%;
+        position: relative;
+        float: right;
+        right: 11%;
+        cursor: pointer;
+        color: lightgray;
+}
+
+.link {
+    margin: 5px 0;
+}
+
+.mid-box p {
+    margin: 0 47%;
+}
+
+.error {
+    width: 90%;
+    padding: 10px;
+    margin:  auto;
+    background-color: rgb(222, 101, 77);
+    border-radius: 5px;
+    color: white;
+}
+
+.error button {
+    float: right;
+    width: 19px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+}

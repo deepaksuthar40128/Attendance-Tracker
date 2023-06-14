@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="main-box">
+        <div class="top-box">
+            <h1 class="heading">
+                ATTENDENCE </br> TRACKER
+            </h1>
+        </div>
+        <div class="mid-box">
+            <% if( error !="" ){ %>
+                <div class="error" role="alert">
+                    <strong> Error </strong>
+                    <%= error %>
+                        <button type="button" onclick="document.getElementsByClassName('error')[0].remove()"
+                            class="btn-close">x</button>
+                </div>
+                <% } %>
+                    <% if( error_messages !="" ){ %>
+                        <div class="error" role="alert">
+                            <strong> Error </strong>
+                            <%= error_messages %>
+                                <button type="button" onclick="document.getElementsByClassName('error')[0].remove()"
+                                    class="btn-close">x</button>
+                        </div>
+                        <% } %>
+            <div class="fancy-text">LOGIN</div>
+            <form action="/login" method="post" id="myform"> 
+                <div class="input-fields">
+                    <label class="labels" for="email">Email</label>;
+                    <input class="try1" type="email" name="email" id="email" autocomplete="off">
+                </div>
+                <div class="input-fields">
+                    <label class="labels" for="Password">Password</label>
+                    <input type="password" name="password" id="password">
+                    <i class="fa-solid fa-eye" id="eye"></i>
+                    <div class="link">
+                        <a href="#">Forgot your password</a>
+                    </div>
+                </div>
+                <button type="submit" id="submit-btn" class="btn">LOGIN</button>
+            </form>
+            <p>or</p>
+            <button class="btn1">
+                <img src="img/img.png" alt="Google"> <a href="/google" >Sign in to Google</a>
+            </button>
+            <div class="biometricAuth">
+              
+            
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/login.js"></script>
+</body>
+
+</html>
